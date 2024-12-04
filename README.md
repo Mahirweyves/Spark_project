@@ -1,124 +1,40 @@
-Spark Session with PySpark in Google Colab
+# PySpark with Google Colab: Analyzing City Temperature Data
 
-This repository demonstrates how to create a Spark session using PySpark in Google Colab and perform various data preprocessing, visualization, and machine learning tasks on a dataset. The example uses a CSV file containing city temperature data.
+## Overview
 
-Features
+This repository demonstrates how to use PySpark in Google Colab to perform data analysis and machine learning tasks on a dataset of city temperatures. The workflow includes data loading, preprocessing, exploratory analysis, feature engineering, and predictive modeling.
 
-Spark Session Setup:
+---
 
-Use PySpark to create a Spark session in Google Colab.
+## Features
 
-Mount Google Drive to access data files.
+- **Data Loading**: Load a CSV dataset from Google Drive using PySpark.
+- **Data Cleaning**: Filter rows based on conditions, drop unnecessary columns, and handle categorical data using StringIndexer.
+- **Exploratory Analysis**:
+  - Display row counts and filtered subsets.
+  - Plot histograms for numerical distributions.
+  - Generate correlation heatmaps.
+- **Feature Engineering**:
+  - Normalize numerical features using MinMaxScaler.
+  - Assemble features for ML models.
+- **Machine Learning**:
+  - Train a Linear Regression model to predict average temperature.
+  - Evaluate the model using RMSE and R² metrics.
+  - Visualize predictions versus actual values.
 
-Data Loading and Filtering:
+---
 
-Load a CSV file from Google Drive into a Spark DataFrame.
+## Prerequisites
 
-Filter rows based on specific conditions.
+- **Google Colab**: Ensure you have access to Google Colab.
+- **PySpark**: Install PySpark (`!pip install pyspark`).
+- **Libraries**: Install additional libraries such as `matplotlib`, `seaborn`, and `sklearn`.
 
-Data Visualization:
+---
 
-Convert Spark DataFrames to Pandas DataFrames for visualization.
+## Quick Start
 
-Create histograms to visualize data distributions.
-
-Generate a heatmap to show the correlation matrix.
-
-Data Transformation:
-
-Encode categorical variables using StringIndexer.
-
-Normalize features using MinMaxScaler.
-
-Reorganize columns and drop unnecessary ones.
-
-Statistical Analysis:
-
-Compute correlation matrices for features.
-
-Linear Regression:
-
-Train a Linear Regression model using Spark MLlib.
-
-Evaluate the model using RMSE and R-squared metrics.
-
-Visualize actual vs. predicted values.
-
-Prerequisites
-
-Python 3.x
-
-Google Colab
-
-PySpark
-
-Matplotlib
-
-Seaborn
-
-Scikit-learn
-
-Getting Started
-
-Install PySpark:
-
-!pip install pyspark
-
-Set Up Google Drive:
-Mount your Google Drive to access the dataset:
-
-from google.colab import drive
-drive.mount('/content/drive')
-
-Load Dataset:
-Replace file_path with the path to your dataset in Google Drive:
-
-file_path = "/content/drive/MyDrive/BigData/city_temperature.csv"
-spark_df = spark.read.csv(file_path, header=True, inferSchema=True)
-
-Run Data Preprocessing:
-
-Filter data by year and temperature.
-
-Encode categorical variables.
-
-Normalize numerical features.
-
-Visualize Data:
-
-Use Matplotlib and Seaborn to create plots for insights.
-
-Train and Evaluate Model:
-
-Split data into training and testing sets.
-
-Train a Linear Regression model.
-
-Evaluate the model using RMSE and R-squared metrics.
-
-Example Outputs
-
-Histograms showing data distribution by year and average temperature.
-
-Correlation heatmap for numerical features.
-
-Scatter plot comparing actual vs. predicted average temperature values.
-
-File Structure
-
-spark_session_demo.py: Main script containing all the code.
-
-city_temperature.csv: Sample dataset used for demonstration.
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Acknowledgements
-
-PySpark Documentation
-
-Matplotlib Documentation
-
-Seaborn Documentation
-
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
