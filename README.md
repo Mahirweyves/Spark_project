@@ -1,40 +1,53 @@
-# PySpark with Google Colab: Analyzing City Temperature Data
+# Spark Session with PySpark in Google Colab
 
-## Overview
-
-This repository demonstrates how to use PySpark in Google Colab to perform data analysis and machine learning tasks on a dataset of city temperatures. The workflow includes data loading, preprocessing, exploratory analysis, feature engineering, and predictive modeling.
+This repository demonstrates how to create a Spark session using PySpark in Google Colab and perform various data preprocessing, visualization, and machine learning tasks on a dataset. The example uses a CSV file containing city temperature data.
 
 ---
 
 ## Features
 
-- **Data Loading**: Load a CSV dataset from Google Drive using PySpark.
-- **Data Cleaning**: Filter rows based on conditions, drop unnecessary columns, and handle categorical data using StringIndexer.
-- **Exploratory Analysis**:
-  - Display row counts and filtered subsets.
-  - Plot histograms for numerical distributions.
-  - Generate correlation heatmaps.
-- **Feature Engineering**:
-  - Normalize numerical features using MinMaxScaler.
-  - Assemble features for ML models.
-- **Machine Learning**:
-  - Train a Linear Regression model to predict average temperature.
-  - Evaluate the model using RMSE and R² metrics.
-  - Visualize predictions versus actual values.
+### Spark Session Setup
+- Use PySpark to create a Spark session in Google Colab.
+- Mount Google Drive to access data files.
+
+### Data Loading and Filtering
+- Load a CSV file from Google Drive into a Spark DataFrame.
+- Filter rows based on specific conditions.
+
+### Data Visualization
+- Convert Spark DataFrames to Pandas DataFrames for visualization.
+- Create histograms to visualize data distributions.
+- Generate a heatmap to show the correlation matrix.
+
+### Data Transformation
+- Encode categorical variables using `StringIndexer`.
+- Normalize features using `MinMaxScaler`.
+- Reorganize columns and drop unnecessary ones.
+
+### Statistical Analysis
+- Compute correlation matrices for features.
+
+### Linear Regression
+- Train a Linear Regression model using Spark MLlib.
+- Evaluate the model using RMSE and R-squared metrics.
+- Visualize actual vs. predicted values.
 
 ---
 
 ## Prerequisites
 
-- **Google Colab**: Ensure you have access to Google Colab.
-- **PySpark**: Install PySpark (`!pip install pyspark`).
-- **Libraries**: Install additional libraries such as `matplotlib`, `seaborn`, and `sklearn`.
+To run this project, you will need:
+- **Python 3.x**
+- **Google Colab**
+- **PySpark**
+- **Matplotlib**
+- **Seaborn**
+- **Scikit-learn**
 
 ---
 
-## Quick Start
+## Getting Started
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+### Install PySpark
+```bash
+!pip install pyspark
